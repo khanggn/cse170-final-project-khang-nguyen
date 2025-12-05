@@ -127,45 +127,54 @@
 
   .vendor-name {
     margin: 0;
-    font-size: 1.50rem;
+    font-size: 1.9rem;
     font-weight: 200;
     letter-spacing: 0.7px;
     font-family: 'KetchupManis', sans-serif;
   }
 
   .vendor-verified {
-    margin: 2px 0 8px;
+    margin: 2px 0 3px 0px;
     font-size: 0.8rem;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 3px;
   }
 
-  .verified-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #7ee69b;
-  }
+.verified-icon {
+  font-size: 1rem;
+  color: #A7F0BA;
+}
 
+.vendor-name-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.separator {
+  color: var(--accent);
+  font-weight: 700;
+}
   .vendor-tags {
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     font-weight: 600;
     font-size: 0.9rem;
   }
 
   .vendor-detail {
     margin: 2px 0;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .label {
     font-weight: 600;
   }
 
-  .price {
-    color: #00ff8a;
-  }
+.price-icon {
+  color: #A7F0BA;
+  font-size: 15px;
+}
 
   /* About section */
   .about-section {
@@ -178,23 +187,47 @@
 
   .about-section h3 {
     margin: 0 0 8px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 800;
+    color: #404040;
   }
 
   .about-section p {
     margin: 0 0 10px;
     font-size: 0.9rem;
     line-height: 1.45;
+    color: #404040;
   }
 
+
   .socials {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-    color: #666;
-  }
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.9rem;
+  color: #404040;
+  text-decoration: none;
+}
+
+.social-link i {
+  font-size: 1rem;
+  color: #404040
+}
+
+.social-link:hover {
+  color: #c7b9ff;
+}
+
+.social-link:visited {
+  color: #7ab8ff;
+}
 
   /* Feedback section */
   .feedback-section {
@@ -207,21 +240,28 @@
   }
 
   .feedback-section h3 {
-    margin: 0 0 10px;
+    margin: 0 0 15px;
     font-size: 1.5rem;
-    font-weight: 200;
-    letter-spacing: 0.7px;
-    font-family: 'KetchupManis', sans-serif;
+    font-weight: 800;
+    color: #F8FAFF;
   }
 
   /* Inner feedback card */
-  .feedback-card {
-    background: #f1f6ff;
-    border-radius: 18px;
-    padding: 14px 14px 12px;
-    color: var(--text);
-    margin-bottom: 12px;
-  }
+.feedback-card {
+  background: var(--primary);         /* blue card */
+  border-radius: 18px;
+  padding: 14px 14px 12px;
+  color: #F8FAFF;                     /* white text */
+  margin-bottom: 12px;
+  border: 1px solid #F8FAFF;          /* white border */
+}
+
+/* Optional: tweak the meta line color so it feels softer */
+.feedback-meta {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #A7F0BA;                     /* same green as verified icon */
+}
 
   .feedback-header {
     display: flex;
@@ -322,25 +362,30 @@
   }
 
   /* Bottom nav */
-  .bottom-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 8px 0;
-    background: var(--primary);
-  }
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  background: var(--primary);
+}
 
-  .nav-item {
-    border: none;
-    background: none;
-    font-size: 1.4rem;
-    opacity: 0.5;
-    cursor: pointer;
-  }
+.nav-item {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 
-  .nav-item.active {
-    opacity: 1;
-  }
+.nav-item i {
+  font-size: 1.45rem;
+  color: var(--accent);
+  opacity: 0.6;
+  transition: opacity 0.25s ease;
+}
+
+.nav-item.active i {
+  opacity: 1;
+}
 
   /* Modal */
   .modal-backdrop {
