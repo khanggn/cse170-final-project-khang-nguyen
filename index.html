@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VendorDex – Vendor Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="phone-frame">
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Vendor’s Profile</h1>
+      <button class="header-close" aria-label="Close profile">✕</button>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+      <!-- VENDOR IMAGE + INFO -->
+      <section class="vendor-wrapper">
+        <div class="vendor-image">
+          <img
+            src="images/banner-cardlabtcg.png"
+            alt="cardlabtcg vendor banner"
+          />
+            <button class="bookmark-btn" aria-label="Save vendor">
+            <i class="fa-solid fa-bookmark bookmark-icon"></i>
+            </button>
+        </div>
+
+        <div class="vendor-info-block">
+          <h2 class="vendor-name">cardlabtcg</h2>
+          <p class="vendor-verified">
+            <span class="verified-dot"></span>Verified Vendor
+          </p>
+
+          <p class="vendor-tags">
+            Fair Trades | Beginner Friendly | Graded Cards
+          </p>
+
+          <p class="vendor-detail">
+            <span class="label">Specialty:</span>
+            Vintage Pokémon + Sealed Collectibles
+          </p>
+          <p class="vendor-detail">
+            <span class="label">Price Range:</span>
+            <span class="price">$$</span>
+          </p>
+          <p class="vendor-detail">
+            <span class="label">Booth:</span>
+            #32
+          </p>
+        </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section class="about-section">
+        <h3>About us</h3>
+        <p>
+          We specialize in Vintage Pokémon sets, affordable singles, and trading
+          opportunities for beginners. Our goal is to help you find the cards
+          you love without pressure or gatekeeping.
+        </p>
+
+        <div class="socials">
+          <span>@cardlabtcg</span>
+          <span>@CardLabTCG</span>
+          <span>@cardlabtcg</span>
+        </div>
+      </section>
+
+      <!-- RECENT FEEDBACKS -->
+      <section class="feedback-section">
+        <h3>Recent Feedbacks</h3>
+
+        <article class="feedback-card">
+          <div class="feedback-header">
+            <div class="avatar">J</div>
+            <div>
+              <p class="feedback-name">Jane Doe</p>
+              <p class="feedback-meta">
+                ✅ Verified Attendee | PokeKon – Niagara Falls
+              </p>
+            </div>
+          </div>
+
+          <p class="feedback-main">
+            “Super friendly staff, helped me find great starter packs.
+            Perfect for newcomers!”
+          </p>
+
+          <p class="feedback-tip">
+            <strong>Tip:</strong>
+            If you’re new to trading, ask them to help you check prices before
+            you swap cards. They walked me through it without making me feel
+            dumb.
+          </p>
+
+          <div class="feedback-photos">
+            <div class="photo-box"></div>
+            <div class="photo-box"></div>
+            <div class="photo-box"></div>
+          </div>
+
+          <div class="feedback-footer-row">
+            <button id="prev-review" class="arrow-btn">‹</button>
+            <p class="review-count">
+              <span id="current-review">1</span> of
+              <span id="total-reviews">5</span>
+            </p>
+            <button id="next-review" class="arrow-btn">›</button>
+          </div>
+        </article>
+
+        <div class="feedback-buttons">
+          <button id="share-feedback-btn" class="primary-btn">
+            Share Your Feedback +
+          </button>
+          <button id="report-vendor-btn" class="danger-btn">
+            Report Vendor
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+      <button class="nav-item active">🏠</button>
+      <button class="nav-item">🔍</button>
+      <button class="nav-item">＋</button>
+      <button class="nav-item">👤</button>
+    </nav>
+
+    <!-- MODAL -->
+    <div id="modal-backdrop" class="modal-backdrop hidden">
+      <div class="modal">
+        <h2 id="modal-title">Title</h2>
+        <p id="modal-text">
+          This is where a real form or report flow would go in the full app.
+        </p>
+        <button id="modal-close-btn" class="primary-btn">Got it</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
