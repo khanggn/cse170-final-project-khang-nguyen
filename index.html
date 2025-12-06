@@ -97,17 +97,20 @@
       <section class="feedback-section">
         <h3>Recent Feedbacks</h3>
 
-        <article class="feedback-card">
-          <div class="feedback-header">
-            <div class="avatar">J</div>
-            <div>
-              <p class="feedback-name">Jane Doe</p>
-              <p class="feedback-meta">
-                <i class="fa-solid fa-circle-check verified-icon"></i>
-                Verified Attendee | PokeKon – Niagara Falls
-              </p>
-            </div>
+      <article class="feedback-card">
+        <div class="feedback-header">
+
+          <i class="fa-solid fa-circle-user feedback-user-icon"></i>
+
+          <div class="feedback-name-row">
+            <p class="feedback-name">Jane Doe</p>
+            <p class="feedback-meta">
+              <i class="fa-solid fa-circle-check verified-icon"></i>
+              Verified Attendee
+            </p>
           </div>
+
+        </div>
 
           <p class="feedback-main">
             “Super friendly staff, helped me find great starter packs.
@@ -130,17 +133,21 @@
           <div class="feedback-footer-row">
             <button id="prev-review" class="arrow-btn">‹</button>
             <p class="review-count">
-              <span id="current-review">1</span> of
-              <span id="total-reviews">5</span>
+              <span id="current-review" class="review-number">1</span> of
+              <span id="total-reviews" class="review-number">5</span>
             </p>
             <button id="next-review" class="arrow-btn">›</button>
           </div>
         </article>
 
         <div class="feedback-buttons">
-          <button id="share-feedback-btn" class="primary-btn">
+          <a 
+            href="https://drive.google.com/file/d/1tTnoG-QSiZsAfbltOQ1Fg2nNwBv_7hNd/view?usp=sharing" 
+            target="_blank" 
+            class="primary-btn share-link"
+          >
             Share Your Feedback +
-          </button>
+          </a>
           <button id="report-vendor-btn" class="danger-btn">
             Report Vendor
           </button>

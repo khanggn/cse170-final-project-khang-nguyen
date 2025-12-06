@@ -14,12 +14,6 @@
   font-style: normal;
 }
 
-  /* Reset-ish */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
 
   body {
     margin: 0;
@@ -88,8 +82,8 @@
 
   .vendor-image img {
     width: 100%;
-    height: 190px;          /* or 180 / 200 depending on your Figma */
-    object-fit: cover;       /* this makes it “fill” like a background image */
+    height: 190px;
+    object-fit: cover;
     object-position: center 20%;
     border-radius: 18px 18px 0 0;
     display: block;
@@ -156,6 +150,7 @@
   color: var(--accent);
   font-weight: 700;
 }
+
   .vendor-tags {
     margin: 0 0 10px;
     font-weight: 600;
@@ -248,50 +243,53 @@
 
   /* Inner feedback card */
 .feedback-card {
-  background: var(--primary);         /* blue card */
+  background: var(--primary);
   border-radius: 18px;
   padding: 14px 14px 12px;
-  color: #F8FAFF;                     /* white text */
+  color: #F8FAFF;
   margin-bottom: 12px;
-  border: 1px solid #F8FAFF;          /* white border */
+  border: 1px solid #F8FAFF;
 }
 
-/* Optional: tweak the meta line color so it feels softer */
 .feedback-meta {
   margin: 0;
   font-size: 0.75rem;
-  color: #A7F0BA;                     /* same green as verified icon */
+  color: #A7F0BA;
 }
 
   .feedback-header {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 6px;
+    gap: 10px;
   }
 
-  .avatar {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #ffe6b8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-  }
+  .feedback-user-icon {
+  font-size: 2rem;
+  color: #F8FAFF;
+}
 
-  .feedback-name {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 700;
-  }
+.feedback-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
-  .feedback-meta {
-    margin: 0;
-    font-size: 0.75rem;
-    color: #4b6fcf;
-  }
+
+.feedback-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #F8FAFF;
+}
+
+.feedback-meta {
+  margin: 0;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #F8FAFF;
+}
 
   .feedback-main {
     margin: 8px 0;
@@ -311,9 +309,12 @@
 
   .photo-box {
     flex: 1;
-    height: 56px;
+    height: 100px;
     border-radius: 10px;
-    background:#F8FAFF
+    background-color: #F8FAFF;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #F8FAFF;
   }
 
   .feedback-footer-row {
@@ -324,6 +325,11 @@
     font-size: 0.85rem;
   }
 
+  .review-number {
+  color: var(--accent);
+  font-weight: 700;
+}
+
   .arrow-btn {
     border-radius: 50%;
     border: none;
@@ -331,9 +337,9 @@
     height: 26px;
     background: #F8FAFF;
     cursor: pointer;
+    color: #404040;
   }
 
-  /* Feedback buttons */
   .feedback-buttons {
     display: flex;
     gap: 10px;
@@ -343,12 +349,13 @@
 
   .primary-btn,
   .danger-btn {
-    border-radius: 999px;
+    border-radius: 30px;
     border: none;
-    padding: 8px 14px;
+    padding: 12px 12px;
     font-size: 0.86rem;
     font-weight: 600;
     cursor: pointer;
+    margin: 10px 0px;
   }
 
   .primary-btn {
@@ -356,9 +363,13 @@
     color: var(--text);
   }
 
+  .share-link {
+  text-decoration: none;
+}
+
   .danger-btn {
     background: var(--danger);
-    color: #F8FAFF;
+    color: var(--text);
   }
 
   /* Bottom nav */
