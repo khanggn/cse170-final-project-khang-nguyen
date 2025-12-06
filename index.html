@@ -13,16 +13,11 @@
 </head>
 <body>
   <div class="phone-frame">
-    <!-- HEADER -->
     <header class="header">
       <h1>Vendor’s Profile</h1>
       <button class="header-close" aria-label="Close profile">✕</button>
     </header>
-
-    <!-- CONTENT -->
     <main class="content">
-
-      <!-- VENDOR IMAGE + INFO -->
       <section class="vendor-wrapper">
         <div class="vendor-image">
           <img
@@ -33,21 +28,17 @@
             <i class="fa-solid fa-bookmark bookmark-icon"></i>
             </button>
         </div>
-
         <div class="vendor-info-block">
           <div class="vendor-name-row">
             <h2 class="vendor-name">cardlabtcg</h2>
-
             <p class="vendor-verified">
               <i class="fa-solid fa-circle-check verified-icon"></i>
               Verified Vendor
             </p>
           </div>
-
           <p class="vendor-tags">
             Fair Trades <span class="separator">|</span> Beginner Friendly <span class="separator">|</span> Graded Cards
           </p>
-
           <p class="vendor-detail">
             <span class="label">Specialty:</span>
             Vintage Pokémon + Sealed Collectibles
@@ -62,8 +53,6 @@
           </p>
         </div>
       </section>
-
-      <!-- ABOUT US -->
       <section class="about-section">
         <h3>About us</h3>
         <p>
@@ -71,20 +60,17 @@
           opportunities for beginners. Our goal is to help you find the cards
           you love without pressure or gatekeeping.
         </p>
-
       <div class="socials">
         <a class="social-link"
           href="https://instagram.com/cardlabtcg"
           target="_blank">
           <i class="fa-brands fa-instagram"></i> @cardlabtcg
         </a>
-
         <a class="social-link"
           href="https://twitter.com/CardLabTCG"
           target="_blank">
           <i class="fa-brands fa-x-twitter"></i> @CardLabTCG
         </a>
-
         <a class="social-link"
           href="https://www.tiktok.com/@cardlabtcg"
           target="_blank">
@@ -92,16 +78,11 @@
         </a>
       </div>
       </section>
-
-      <!-- RECENT FEEDBACKS -->
       <section class="feedback-section">
         <h3>Recent Feedbacks</h3>
-
       <article class="feedback-card">
         <div class="feedback-header">
-
           <i class="fa-solid fa-circle-user feedback-user-icon"></i>
-
           <div class="feedback-name-row">
             <p class="feedback-name">Jane Doe</p>
             <p class="feedback-meta">
@@ -109,27 +90,22 @@
               Verified Attendee
             </p>
           </div>
-
         </div>
-
           <p class="feedback-main">
             “Super friendly staff, helped me find great starter packs.
             Perfect for newcomers!”
           </p>
-
           <p class="feedback-tip">
             <strong>Tip:</strong>
             If you’re new to trading, ask them to help you check prices before
             you swap cards. They walked me through it without making me feel
             dumb.
           </p>
-
           <div class="feedback-photos">
             <div class="photo-box"></div>
             <div class="photo-box"></div>
             <div class="photo-box"></div>
           </div>
-
           <div class="feedback-footer-row">
             <button id="prev-review" class="arrow-btn">‹</button>
             <p class="review-count">
@@ -139,7 +115,6 @@
             <button id="next-review" class="arrow-btn">›</button>
           </div>
         </article>
-
         <div class="feedback-buttons">
           <a 
             href="https://drive.google.com/file/d/1tTnoG-QSiZsAfbltOQ1Fg2nNwBv_7hNd/view?usp=sharing" 
@@ -154,39 +129,57 @@
         </div>
       </section>
     </main>
-
-    <!-- BOTTOM NAV -->
     <nav class="bottom-nav">
-
       <a href="https://drive.google.com/file/d/1TM3a8eb8aN9tU8OEjRaybHHdPPrnwapM/view?usp=sharing" target="_blank"
         class="nav-item">
         <i class="fa-solid fa-house"></i>
       </a>
-
       <a href="https://drive.google.com/file/d/1bC-hRMo4p5boALSv-xQm45CzHk7uhiGC/view?usp=sharing" target="_blank" class="nav-item active">
         <i class="fa-solid fa-magnifying-glass"></i>
       </a>
-
       <a href="https://drive.google.com/file/d/1tTnoG-QSiZsAfbltOQ1Fg2nNwBv_7hNd/view?usp=sharing" target="_blank" class="nav-item">
         <i class="fa-solid fa-square-plus"></i>
       </a>
-
       <a href="https://drive.google.com/file/d/1AgRyR_P2pycqGjETy0W2KjU6mW-MYUy3/view?usp=sharing" target="_blank" class="nav-item">
         <i class="fa-solid fa-user"></i>
       </a>
-
     </nav>
-
-    <!-- MODAL -->
-    <div id="modal-backdrop" class="modal-backdrop hidden">
-      <div class="modal">
-        <h2 id="modal-title">Title</h2>
-        <p id="modal-text">
-          This is where a real form or report flow would go in the full app.
-        </p>
-        <button id="modal-close-btn" class="primary-btn">Got it</button>
-      </div>
+<div id="modal-backdrop" class="modal-backdrop hidden">
+  <div class="modal report-modal">
+    <h2 class="modal-title">Report Vendor</h2>
+    <p class="modal-subtitle">What issue would you like to report?</p>
+    <form class="report-form">
+      <label class="report-option">
+        <input type="checkbox" name="reason" />
+        Authenticity concern
+      </label>
+      <label class="report-option">
+        <input type="checkbox" name="reason" />
+        Unfair trade behavior
+      </label>
+      <label class="report-option">
+        <input type="checkbox" name="reason" />
+        Harassment or inappropriate conduct
+      </label>
+      <label class="report-option">
+        <input type="checkbox" name="reason" />
+        Incorrect vendor information
+      </label>
+      <label class="report-option">
+        <input type="checkbox" name="reason" />
+        Something else
+      </label>
+      <textarea
+        id="report-details"
+        class="report-textarea"
+        placeholder="Add details here..."
+      ></textarea>
+    <div class="report-actions">
+      <button class="report-btn secondary-btn">Cancel</button>
+      <button id="submit-report" class="report-btn confirm-btn">Send Report</button>
     </div>
+    </form>
   </div>
+</div>
 </body>
 </html>

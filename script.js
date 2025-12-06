@@ -1,50 +1,48 @@
-// ------- BOTTOM NAV: toggle active state (purely visual) -------
 const navItems = document.querySelectorAll(".bottom-nav .nav-item");
-
 navItems.forEach((btn) => {
   btn.addEventListener("click", () => {
     navItems.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
   });
 });
-
-// ------- FEEDBACK CAROUSEL DATA -------
 const feedbacks = [
   {
     name: "Jane Doe",
-    quote: "Super friendly staff, helped me find great starter packs. Perfect for newcomers!",
+    quote:
+      "Super friendly staff, helped me find great starter packs. Perfect for newcomers!",
     tip: "If you’re new to trading, ask them to help you check prices before you swap cards. They walked me through it without making me feel dumb.",
-    photos: ["images/img1.png", "images/img2.png", "images/img3.png"]
+    photos: ["images/img1.png", "images/img2.png", "images/img3.png"],
   },
   {
     name: "Alex Kim",
-    quote: "They let me take my time looking through binders and never pressured me to buy.",
+    quote:
+      "They let me take my time looking through binders and never pressured me to buy.",
     tip: "If you're unsure about card condition, ask to see it under better lighting. They were super patient about it.",
-    photos: ["images/img4.png", "images/img5.png", "images/img6.png"]
+    photos: ["images/img4.png", "images/img5.png", "images/img6.png"],
   },
   {
     name: "Riley T.",
-    quote: "Great selection of graded slabs and fair prices compared to other booths.",
+    quote:
+      "Great selection of graded slabs and fair prices compared to other booths.",
     tip: "Have a budget in mind before you walk up. They’ll help you find options that fit it.",
-    photos: ["images/img7.png", "images/img8.png", "images/img9.png"]
+    photos: ["images/img7.png", "images/img8.png", "images/img9.png"],
   },
   {
     name: "Sam P.",
-    quote: "I traded a few mid-tier cards toward a grail and they explained the value differences clearly.",
+    quote:
+      "I traded a few mid-tier cards toward a grail and they explained the value differences clearly.",
     tip: "Bring screenshots of recent sales. This vendor is happy to compare and explain.",
-    photos: ["images/img10.png", "images/img11.png", "images/img12.png"]
+    photos: ["images/img10.png", "images/img11.png", "images/img12.png"],
   },
   {
     name: "Mina L.",
-    quote: "Nice energy, no gatekeeping, and they didn’t talk down to me even though I’m new.",
+    quote:
+      "Nice energy, no gatekeeping, and they didn’t talk down to me even though I’m new.",
     tip: "Tell them what sets or art styles you like. They’ll pull cards you might not think to ask for.",
-    photos: ["images/img13.png", "images/img14.png", "images/img15.png"]
-  }
+    photos: ["images/img13.png", "images/img14.png", "images/img15.png"],
+  },
 ];
-
 let currentIndex = 0;
-
-// ------- FEEDBACK CAROUSEL ELEMENTS -------
 const nameEl = document.querySelector(".feedback-name");
 const quoteEl = document.querySelector(".feedback-main");
 const tipEl = document.querySelector(".feedback-tip");
@@ -53,54 +51,34 @@ const totalReviewsSpan = document.getElementById("total-reviews");
 const prevBtn = document.getElementById("prev-review");
 const nextBtn = document.getElementById("next-review");
 const photoBoxes = document.querySelectorAll(".photo-box");
-
-
-// ------- MODAL ELEMENTS (share/report/close) -------
 const modalBackdrop = document.getElementById("modal-backdrop");
-const modalTitle = document.getElementById("modal-title");
-const modalText = document.getElementById("modal-text");
-const modalCloseBtn = document.getElementById("modal-close-btn");
-
 const reportVendorBtn = document.getElementById("report-vendor-btn");
-const shareFeedbackBtn = document.getElementById("share-feedback-btn");
-
-// ------- BOOKMARK BUTTON -------
+const cancelReportBtn = document.getElementById("cancel-report");
+const submitReportBtn = document.getElementById("submit-report");
 const bookmarkBtn = document.querySelector(".bookmark-btn");
-
-// ------- HELPERS -------
-function openModal(title, text) {
-  modalTitle.textContent = title;
-  modalText.textContent = text;
-  modalBackdrop.classList.remove("hidden");
-}
-
 function renderFeedback(index) {
   const data = feedbacks[index];
 
-  // Text fields
   if (nameEl) nameEl.textContent = data.name;
   if (quoteEl) quoteEl.textContent = `“${data.quote}”`;
   if (tipEl) tipEl.innerHTML = `<strong>Tip:</strong> ${data.tip}`;
 
-  if (currentReviewSpan) currentReviewSpan.textContent = String(index + 1);
-  if (totalReviewsSpan) totalReviewsSpan.textContent = String(feedbacks.length);
+  if (currentReviewSpan)
+    currentReviewSpan.textContent = String(index + 1);
+  if (totalReviewsSpan)
+    totalReviewsSpan.textContent = String(feedbacks.length);
 
-  // Photos
   if (photoBoxes.length) {
     photoBoxes.forEach((box, i) => {
       const url = data.photos[i];
-
       if (url) {
         box.style.backgroundImage = `url('${url}')`;
       } else {
-        box.style.backgroundImage = "none"; // fallback if fewer than 3 photos
+        box.style.backgroundImage = "none";
       }
     });
   }
 }
-
-
-// ------- CAROUSEL BUTTONS -------
 if (prevBtn && nextBtn) {
   prevBtn.addEventListener("click", () => {
     currentIndex--;
@@ -114,23 +92,24 @@ if (prevBtn && nextBtn) {
     renderFeedback(currentIndex);
   });
 }
-
-// ------- MODAL BUTTONS -------
-if (reportVendorBtn) {
+if (reportVendorBtn && modalBackdrop) {
   reportVendorBtn.addEventListener("click", () => {
-    openModal(
-      "Report Vendor",
-      "In a full version of VendorDex, this is where you could report serious issues or sketchy behavior with this vendor. For this prototype, the report is not actually sent."
-    );
+    modalBackdrop.classList.remove("hidden");
   });
 }
-
-if (modalCloseBtn) {
-  modalCloseBtn.addEventListener("click", () => {
+if (cancelReportBtn && modalBackdrop) {
+  cancelReportBtn.addEventListener("click", () => {
     modalBackdrop.classList.add("hidden");
   });
 }
-
+if (submitReportBtn && modalBackdrop) {
+  submitReportBtn.addEventListener("click", () => {
+    alert(
+      "Thanks! In the full app, this report would be sent to convention staff."
+    );
+    modalBackdrop.classList.add("hidden");
+  });
+}
 if (modalBackdrop) {
   modalBackdrop.addEventListener("click", (e) => {
     if (e.target === modalBackdrop) {
@@ -138,24 +117,17 @@ if (modalBackdrop) {
     }
   });
 }
-
-// ------- CLOSE HEADER BUTTON (top right X) -------
 const closeButton = document.querySelector(".header-close");
 if (closeButton) {
   closeButton.addEventListener("click", () => {
-    openModal(
-      "Close Profile",
+    alert(
       "In the full app, this would take you back to the previous screen or convention view."
     );
   });
 }
-
-// ------- BOOKMARK TOGGLE -------
 if (bookmarkBtn) {
   bookmarkBtn.addEventListener("click", function () {
     this.classList.toggle("saved");
   });
 }
-
-// ------- INITIALIZE -------
 renderFeedback(currentIndex);

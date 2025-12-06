@@ -6,22 +6,17 @@
     --text: #3d3d3d;
     --danger: #ff9f9f;
   }
-
   @font-face {
   font-family: 'KetchupManis';
   src: url('fonts/KetchupManisDemo.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
-
   body {
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif; 
-    background: #111; /* just to simulate a device frame around the app */
+    background: #111;
   }
-
-  /* Phone frame */
   .phone-frame {
     max-width: 430px;
     margin: 0 auto;
@@ -30,8 +25,6 @@
     display: flex;
     flex-direction: column;
   }
-
-  /* Header */
   .header {
     display: flex;
     justify-content: space-between;
@@ -41,13 +34,11 @@
     color: #ffe8a8;
     font-family: 'KetchupManis', sans-serif;
   }
-
   .header h1 {
     margin: 0;
     font-size: 2rem;
     font-weight: 300;
   }
-
   .header-close {
     border: none;
     background: #ffb3b3;
@@ -58,15 +49,11 @@
     font-size: 1.1rem;
     cursor: pointer;
   }
-
-  /* Content area */
   .content {
     flex: 1;
-    padding: 14px 14px 80px;
+    padding: 14px 14px 14px;
     overflow-y: auto;
   }
-
-  /* Vendor hero + info */
   .vendor-wrapper {
     background: white;
     border-radius: 20px 20px 0 0;
@@ -75,11 +62,9 @@
     margin-bottom: 0px;
     border-bottom: none;
   }
-    
   .vendor-image {
     position: relative;
   }
-
   .vendor-image img {
     width: 100%;
     height: 190px;
@@ -88,7 +73,6 @@
     border-radius: 18px 18px 0 0;
     display: block;
   }
-
   .bookmark-btn {
     position: absolute;
     top: 18px;
@@ -101,13 +85,11 @@
     cursor: pointer;
     border: 1px solid #404040;
   }
-
 .bookmark-icon {
   font-size: 1.4rem;
   color: transparent;
   -webkit-text-stroke: 1px #404040;
 }
-
 .bookmark-btn.saved .bookmark-icon {
   color: var(--accent);
   -webkit-text-stroke: 1px #404040;
@@ -118,7 +100,6 @@
     padding: 12px 16px 14px;
     border-top: 1px solid #000000;
   }
-
   .vendor-name {
     margin: 0;
     font-size: 1.9rem;
@@ -126,7 +107,6 @@
     letter-spacing: 0.7px;
     font-family: 'KetchupManis', sans-serif;
   }
-
   .vendor-verified {
     margin: 2px 0 3px 0px;
     font-size: 0.8rem;
@@ -134,44 +114,35 @@
     align-items: center;
     gap: 3px;
   }
-
 .verified-icon {
   font-size: 1rem;
   color: #A7F0BA;
 }
-
 .vendor-name-row {
   display: flex;
   align-items: center;
   gap: 5px;
 }
-
 .separator {
   color: var(--accent);
   font-weight: 700;
 }
-
   .vendor-tags {
     margin: 0 0 10px;
     font-weight: 600;
     font-size: 0.9rem;
   }
-
   .vendor-detail {
     margin: 2px 0;
     font-size: 0.9rem;
   }
-
   .label {
     font-weight: 600;
   }
-
 .price-icon {
   color: #A7F0BA;
   font-size: 15px;
 }
-
-  /* About section */
   .about-section {
     background: white;
     border-radius: 0;
@@ -179,29 +150,24 @@
     padding: 14px 16px 18px;
     margin-bottom: 0px;
   }
-
   .about-section h3 {
     margin: 0 0 8px;
     font-size: 1.5rem;
     font-weight: 800;
     color: #404040;
   }
-
   .about-section p {
     margin: 0 0 10px;
     font-size: 0.9rem;
     line-height: 1.45;
     color: #404040;
   }
-
-
   .socials {
   display: flex;
   gap: 16px;
   align-items: center;
   margin-top: 8px;
 }
-
 .social-link {
   display: flex;
   align-items: center;
@@ -210,21 +176,16 @@
   color: #404040;
   text-decoration: none;
 }
-
 .social-link i {
   font-size: 1rem;
   color: #404040
 }
-
 .social-link:hover {
   color: #c7b9ff;
 }
-
 .social-link:visited {
   color: #7ab8ff;
 }
-
-  /* Feedback section */
   .feedback-section {
     background: var(--primary);
     border-radius: 0 0 20px 20px;
@@ -233,15 +194,12 @@
     border: 1px solid #000000;
     border-top: none;
   }
-
   .feedback-section h3 {
     margin: 0 0 15px;
     font-size: 1.5rem;
     font-weight: 800;
     color: #F8FAFF;
   }
-
-  /* Inner feedback card */
 .feedback-card {
   background: var(--primary);
   border-radius: 18px;
@@ -250,38 +208,31 @@
   margin-bottom: 12px;
   border: 1px solid #F8FAFF;
 }
-
 .feedback-meta {
   margin: 0;
   font-size: 0.75rem;
   color: #A7F0BA;
 }
-
   .feedback-header {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-
   .feedback-user-icon {
   font-size: 2rem;
   color: #F8FAFF;
 }
-
 .feedback-name-row {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-
-
 .feedback-name {
   margin: 0;
   font-size: 0.95rem;
   font-weight: 700;
   color: #F8FAFF;
 }
-
 .feedback-meta {
   margin: 0;
   font-size: 0.8rem;
@@ -290,23 +241,19 @@
   gap: 3px;
   color: #F8FAFF;
 }
-
   .feedback-main {
     margin: 8px 0;
     font-size: 0.9rem;
   }
-
   .feedback-tip {
     margin: 4px 0 10px;
     font-size: 0.85rem;
   }
-
   .feedback-photos {
     display: flex;
     gap: 6px;
     margin-bottom: 8px;
   }
-
   .photo-box {
     flex: 1;
     height: 100px;
@@ -316,7 +263,6 @@
     background-position: center;
     border: 1px solid #F8FAFF;
   }
-
   .feedback-footer-row {
     display: flex;
     align-items: center;
@@ -324,12 +270,10 @@
     gap: 12px;
     font-size: 0.85rem;
   }
-
   .review-number {
   color: var(--accent);
   font-weight: 700;
 }
-
   .arrow-btn {
     border-radius: 50%;
     border: none;
@@ -339,14 +283,12 @@
     cursor: pointer;
     color: #404040;
   }
-
   .feedback-buttons {
     display: flex;
     gap: 10px;
     margin-top: 8px;
     flex-wrap: wrap;
   }
-
   .primary-btn,
   .danger-btn {
     border-radius: 30px;
@@ -357,22 +299,17 @@
     cursor: pointer;
     margin: 10px 0px;
   }
-
   .primary-btn {
     background: var(--accent);
     color: var(--text);
   }
-
   .share-link {
   text-decoration: none;
 }
-
   .danger-btn {
     background: var(--danger);
     color: var(--text);
   }
-
-  /* Bottom nav */
 .bottom-nav {
   display: flex;
   justify-content: space-around;
@@ -380,51 +317,122 @@
   padding: 30px 0;
   background: var(--primary);
 }
-
 .nav-item {
   border: none;
   background: none;
   cursor: pointer;
 }
-
 .nav-item i {
   font-size: 1.45rem;
   color: var(--accent);
   opacity: 0.6;
   transition: opacity 0.25s ease;
 }
-
 .nav-item.active i {
   opacity: 1;
 }
-
-  /* Modal */
-  .modal-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .modal-backdrop.hidden {
-    display: none;
-  }
-
-  .modal {
-    width: 88%;
-    max-width: 360px;
-    background: #F8FAFF;
-    border-radius: 18px;
-    padding: 18px 16px 16px;
-  }
-
-  .modal h2 {
-    margin: 0 0 6px;
-  }
-
-  .modal p {
-    margin: 0 0 14px;
-    font-size: 0.9rem;
-  }
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal-backdrop.hidden {
+  display: none;
+}
+.modal.report-modal {
+  width: 90%;
+  max-width: 364px;
+  background: #f8a58a;
+  border-radius: 28px;
+  padding: 20px 18px 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  color: #404040;
+  overflow: hidden;
+}
+.modal-title {
+  margin: 0 0 6px;
+  font-family: "KetchupManis", sans-serif;
+  font-size: 1.8rem;
+}
+.modal-subtitle {
+  margin: 0 0 16px;
+  font-size: 1rem;
+}
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.report-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+.report-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #404040;
+}
+.report-textarea {
+  margin-top: 10px;
+  width: 100%;
+  min-height: 110px;
+  border-radius: 18px;
+  border: 2px solid #404040;
+  padding: 10px 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.9rem;
+  resize: none;
+  box-sizing: border-box;
+}
+.report-textarea::placeholder {
+  color: #969696;
+}
+.report-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  gap: 12px;
+}
+.report-btn {
+  flex: 1;
+  text-align: center;
+  border-radius: 30px;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.secondary-btn {
+  border-radius: 30px;
+  border: 2px solid #404040;
+  background: transparent;
+  padding: 7px 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.confirm-btn {
+  border-radius: 30px;
+  border: 2px solid #404040;
+  padding: 7px 18px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #f8a58a;
+  color: #404040;
+  font-weight: 600;
+}
+.primary-btn {
+  border-radius: 30px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: #404040;
+}
